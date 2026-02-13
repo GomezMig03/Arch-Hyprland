@@ -1,5 +1,5 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
+# 💫 https://github.com/LinuxBeginnings 💫 #
 # base-devel + archlinux-keyring #
 
 base=( 
