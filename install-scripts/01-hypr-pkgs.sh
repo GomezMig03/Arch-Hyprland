@@ -109,11 +109,23 @@ fi
 
 # Set the name of the log file to include the current date and time
 LOG="Install-Logs/install-$(date +%d-%H%M%S)_hypr-pkgs.log"
+# rofi v2.x presence check (do not remove if already on v2.x)
+skip_rofi_uninstall=false
+if pacman -Qi rofi &>/dev/null; then
+  rofi_version="$(pacman -Qi rofi | awk -F': ' '/Version/{print $2}' | cut -d- -f1)"
+  if [[ "${rofi_version%%.*}" == "2" ]]; then
+    skip_rofi_uninstall=true
+    echo -e "${INFO} rofi ${rofi_version} detected. Skipping uninstall of rofi."
+  fi
+fi
 
 # conflicting packages removal
 overall_failed=0
 printf "\n%s - ${SKY_BLUE}Removing some packages${RESET} as it conflicts with KooL's Hyprland Dots \n" "${NOTE}"
 for PKG in "${uninstall[@]}"; do
+  if [[ "$PKG" == "rofi" && "$skip_rofi_uninstall" == "true" ]]; then
+    continue
+  fi
   uninstall_package "$PKG" 2>&1 | tee -a "$LOG"
   if [ $? -ne 0 ]; then
     overall_failed=1
