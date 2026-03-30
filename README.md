@@ -1,19 +1,7 @@
-## IMPORTANT! Beginning of March 2026, This project will be archived and it will be maintained by Dwilliams
-- https://github.com/LinuxBeginnings
-- https://github.com/LinuxBeginnings/Arch-Hyprland
-
-
 <div align="center">
 
-# 💌 ** KooL's Arch - Hyprland Install Script ** 💌
+# ✨ Hyprland Install Script ✨
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JaKooLit/Hyprland-Dots/main/assets/latte.png" width="400" />
-</p>
-
-![GitHub Repo stars](https://img.shields.io/github/stars/JaKooLit/Arch-Hyprland?style=for-the-badge&color=cba6f7) ![GitHub last commit](https://img.shields.io/github/last-commit/JaKooLit/Arch-Hyprland?style=for-the-badge&color=b4befe) ![GitHub repo size](https://img.shields.io/github/repo-size/JaKooLit/Arch-Hyprland?style=for-the-badge&color=cba6f7) <a href="https://discord.gg/kool-tech-world"> <img src="https://img.shields.io/discord/1151869464405606400?style=for-the-badge&logo=discord&color=cba6f7&link=https%3A%2F%2Fdiscord.gg%kool-tech-world"> </a>
-
-<br/>
 </div>
 
 <div align="center">
@@ -23,33 +11,18 @@
   <a href="#gallery-and-videos"><kbd> <br> Gallery <br> </kbd></a>&ensp;&ensp;
  </div><br>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JaKooLit/Hyprland-Dots/main/assets/latte.png" width="200" />
-</p>
-
 <div align="center">
 👇 KOOL's Hyprland-Dots related Links 👇
 <br/>
 </div>
 <div align="center">
 <br>
-  <a href="https://github.com/JaKooLit/Hyprland-Dots"><kbd> <br> Hyprland-Dots repo <br> </kbd></a>&ensp;&ensp;
-  <a href="https://www.youtube.com/playlist?list=PLDtGd5Fw5_GjXCznR0BzCJJDIQSZJRbxx"><kbd> <br> Youtube <br> </kbd></a>&ensp;&ensp;
+  <a href="https://github.com/GomezMig03/dotfiles"><kbd> <br> Hyprland-Dots repo <br> </kbd></a>&ensp;&ensp;
   <a href="https://github.com/JaKooLit/Hyprland-Dots/wiki"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
   <a href="https://github.com/JaKooLit/Hyprland-Dots/wiki/Keybinds"><kbd> <br> Keybinds <br> </kbd></a>&ensp;&ensp;
   <a href="https://github.com/JaKooLit/Hyprland-Dots/wiki/FAQ"><kbd> <br> FAQ <br> </kbd></a>&ensp;&ensp;
-  <a href="https://discord.gg/kool-tech-world"><kbd> <br> Discord <br> </kbd></a>
 </div><br>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/JaKooLit/Hyprland-Dots/main/assets/latte.png" width="200" />
-</p>
-
-<h3 align="center">
-	<img src="https://github.com/JaKooLit/Telegram-Animated-Emojis/blob/main/Activity/Sparkles.webp" alt="Sparkles" width="38" height="38" />
-	KooL Hyprland-Dotfiles Showcase 
-	<img src="https://github.com/JaKooLit/Telegram-Animated-Emojis/blob/main/Activity/Sparkles.webp" alt="Sparkles" width="38" height="38" />
-</h3>
 
 <div align="center">
 
@@ -64,12 +37,12 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 - [YOUTUBE-LINK](https://youtu.be/wQ70lo7P6vA?si=_QcbrNKh_Bg0L3wC)
 - [YOUTUBE-Hyprland-Playlist](https://youtube.com/playlist?list=PLDtGd5Fw5_GjXCznR0BzCJJDIQSZJRbxx&si=iaNjLulFdsZ6AV-t)
 
-### 🪧🪧🪧 ANNOUNCEMENT 🪧🪧🪧
+### 🪧 ANNOUNCEMENT 🪧
 
-- This Repo does not contain Hyprland Dots or configs! Dotfiles can be checked here [`Hyprland-Dots`](https://github.com/JaKooLit/Hyprland-Dots) . During installation, if you opt to copy pre-configured dots, it will be downloaded from that centralized repo.
+- This is a fork of [Ja.KooLit's Arch-Hyprland](https://github.com/JaKooLit/Arch-Hyprland)
+- This Repo does not contain Hyprland Dots or configs! Dotfiles can be checked here [`dotfiles`](https://github.com/GomezMig03/dotfiles) . During installation, if you opt to copy pre-configured dots, it will be downloaded from that centralized repo.
 - Hyprland-Dots use are constantly evolving / improving. you can check CHANGELOGS here [`Hyprland-Dots-Changelogs`](https://github.com/JaKooLit/Hyprland-Dots/wiki/Changelogs)
 - Since the Hyprland-Dots are evolving, some of the screenshots maybe old
-- the wallpaper offered to be downloaded towards the end is from this [`REPO`](https://github.com/JaKooLit/Wallpaper-Bank)
 
 > [!IMPORTANT]
 > install a backup tool like `snapper` or `timeshift`. and Backup your system before installing hyprland using this script (HIGHLY RECOMMENDED)
@@ -97,10 +70,9 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 - after reboot, need to ran the install script via tty. So suggest download the install script first. Then disable gdm. reboot and once logged in, cd into Distro-Hyprland then `./install.sh` and then choose SDDM and SDDM theme in the options.
 - NOTE: Distro-Hyprland is Arch-Hyprland, or Fedora-Hyprland .. depends on which install scripts you downloaded.
 
-#### 💫 SDDM and GTK Themes offered
+#### 💫 SDDM Theme offered
 
-- If you opted to install SDDM theme, here's the [`LINK`](https://github.com/JaKooLit/simple-sddm-2) which is a modified fork of [`LINK`](https://github.com/Keyitdev/sddm-astronaut-theme)
-- If you opted to install GTK Themes, Icons, here's the [`LINK`](https://github.com/JaKooLit/GTK-themes-icons). This also includes Bibata Modern Ice cursor.
+- If you opted to install SDDM theme, here's the [`LINK`](https://github.com/uiriansan/SilentSDDM).
 
 #### 👀 Nvidia GPU Owners.
 
@@ -120,7 +92,7 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 - NOTE: `curl` package is required before running this command
 
 ```bash
-sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-install.sh)
+sh <(curl -L https://raw.githubusercontent.com/GomezMig03/Arch-Hyprland/main/auto-install.sh)
 ```
 
 ## ✨ to use this script
@@ -128,7 +100,7 @@ sh <(curl -L https://raw.githubusercontent.com/JaKooLit/Arch-Hyprland/main/auto-
 - clone this repo (latest commit only) to reduce file size download by using git. Change directory, make executable and run the script
 
 ```bash
-git clone --depth=1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+git clone --depth=1 https://github.com/GomezMig03/Arch-Hyprland.git ~/Arch-Hyprland
 cd ~/Arch-Hyprland
 chmod +x install.sh
 ./install.sh
@@ -177,13 +149,13 @@ source ~/.zshrc
 
 #### 🔄 switching between Hyprland-git and none Hyprland-git
 
-- you can use my prepared script [`LINK`](https://github.com/JaKooLit/Arch-Hyprland/tree/main/assets/hyprland-install)
+- you can use the prepared script [`LINK`](https://github.com/GomezMig03/Arch-Hyprland/tree/main/assets/hyprland-install)
 - Readme is also there
 
 #### 🙋 👋 Having issues or questions?
 
 - for the install part, kindly open issue on this repo
-- for the Pre-configured Hyprland dots / configuration, submit issue [`here`](https://github.com/JaKooLit/Hyprland-Dots/issues)
+- for the Pre-configured Hyprland dots / configuration, submit issue [`here`](https://github.com/GomezMig03/Hyprland-Dots/issues)
 
 #### 🔧 Proper way to re-installing a particular script from install-scripts directory
 
@@ -219,7 +191,7 @@ source ~/.zshrc
 
 #### ❗ some known issues for nvidia
 
-- reports from members of my discord, states that some users of nvidia are getting stuck on sddm login. credit to @Kenni Fix stated was
+- reports from members of Ja.KooLit's discord, states that some users of nvidia are getting stuck on sddm login. credit to @Kenni Fix stated was
 
 ```
  while in sddm press ctrl+alt+F2 or F3
@@ -266,37 +238,8 @@ env = WLR_RENDERER_ALLOW_SOFTWARE,1
 
 - As stated above, these script does not contain actual config files. These are only the installer of packages
 - If you want to contribute and/or test the Hyprland-Dotfiles (development branch), [`Hyprland-Dots-Development`](https://github.com/JaKooLit/Hyprland-Dots/tree/development)
-- Want to contribute on KooL-Hyprland-Dots Click [`HERE`](https://github.com/JaKooLit/Hyprland-Dots/blob/main/CONTRIBUTING.md) for a guide how to contribute
-- Want to contribute on This Installer? Click [`HERE`](https://github.com/JaKooLit/Arch-Hyprland/blob/main/CONTRIBUTING.md) for a guide how to contribute
+- Want to contribute on This Installer? Click [`HERE`](https://github.com/GomezMig03/Arch-Hyprland/blob/main/CONTRIBUTING.md) for a guide how to contribute
 
 #### 👍👍👍 Thanks and Credits!
 
 - [`Hyprland`](https://hyprland.org/) Of course to Hyprland and @vaxerski for this awesome Dynamic Tiling Manager.
-
-## 💖 Support
-
-- a Star on my Github repos would be nice 🌟
-
-- Subscribe to my Youtube Channel [YouTube](https://www.youtube.com/@Ja.KooLit)
-
-- you can also give support through coffee's or btc 😊
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jakoolit)
-
-or
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/JaKooLit)
-
-Or you can donate cryto on my btc wallet :)
-
-> 1N3MeV2dsX6gQB42HXU6MF2hAix1mqjo8i
-
-![Bitcoin](https://github.com/user-attachments/assets/7ed32f8f-c499-46f0-a53c-3f6fbd343699)
-
-#### 📹 Youtube videos (Click to view and watch the playlist) 📹
-
-[![Youtube Playlist Thumbnail](https://raw.githubusercontent.com/JaKooLit/screenshots/main/Youtube.png)](https://youtube.com/playlist?list=PLDtGd5Fw5_GjXCznR0BzCJJDIQSZJRbxx&si=iaNjLulFdsZ6AV-t)
-
-## 🥰🥰 💖💖 👍👍👍
-
-[![Stargazers over time](https://starchart.cc/JaKooLit/Arch-Hyprland.svg?variant=adaptive)](https://starchart.cc/JaKooLit/Arch-Hyprland)
