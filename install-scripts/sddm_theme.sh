@@ -1,9 +1,8 @@
 #!/bin/bash
 # 💫 https://github.com/JaKooLit 💫 #
 # SDDM themes #
-
-source_theme="https://github.com/JaKooLit/simple-sddm-2.git"
-theme_name="simple_sddm_2"
+source_theme="https://github.com/uiriansan/SilentSDDM"
+theme_name=""
 
 ## WARNING: DO NOT EDIT BEYOND THIS LINE IF YOU DON'T KNOW WHAT YOU ARE DOING! ##
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -38,7 +37,7 @@ if [ -d "$theme_name" ]; then
 fi
 
 # Clone the repository
-if git clone --depth=1 "$source_theme" "$theme_name"; then
+if git clone -b main --depth=1 "$source_theme" "$theme_name"; then
   if [ ! -d "$theme_name" ]; then
     echo "${ERROR} Failed to clone the repository." | tee -a "$LOG"
   fi
@@ -50,13 +49,17 @@ if git clone --depth=1 "$source_theme" "$theme_name"; then
   fi
 
   # Move cloned theme to the themes directory
-  sudo mv "$theme_name" "/usr/share/sddm/themes/$theme_name" 2>&1 | tee -a "$LOG"
+  #sudo mv "$theme_name" "/usr/share/sddm/themes/$theme_name" 2>&1 | tee -a "$LOG"
+
+  # Install cloned theme
+  cd "$theme_name"
+  ./install.sh
 
   # setting up SDDM theme
   sddm_conf="/etc/sddm.conf"
   BACKUP_SUFFIX=".bak"
 
-  echo -e "${NOTE} Setting up the login screen." | tee -a "$LOG"
+  #echo -e "${NOTE} Setting up the login screen." | tee -a "$LOG"
 
   # Backup the sddm.conf file if it exists
   if [ -f "$sddm_conf" ]; then
@@ -68,22 +71,22 @@ if git clone --depth=1 "$source_theme" "$theme_name"; then
   fi
 
   # Check if the [Theme] section exists
-  if grep -q '^\[Theme\]' "$sddm_conf"; then
+  #if grep -q '^\[Theme\]' "$sddm_conf"; then
     # Update the Current= line under [Theme]
-    sudo sed -i "/^\[Theme\]/,/^\[/{s/^\s*Current=.*/Current=$theme_name/}" "$sddm_conf" 2>&1 | tee -a "$LOG"
+    #sudo sed -i "/^\[Theme\]/,/^\[/{s/^\s*Current=.*/Current=$theme_name/}" "$sddm_conf" 2>&1 | tee -a "$LOG"
     
     # If no Current= line was found and replaced, append it after the [Theme] section
-    if ! grep -q '^\s*Current=' "$sddm_conf"; then
-      sudo sed -i "/^\[Theme\]/a Current=$theme_name" "$sddm_conf" 2>&1 | tee -a "$LOG"
-      echo "Appended Current=$theme_name under [Theme] in $sddm_conf" | tee -a "$LOG"
-    else
-      echo "Updated Current=$theme_name in $sddm_conf" | tee -a "$LOG"
-    fi
-  else
+    #if ! grep -q '^\s*Current=' "$sddm_conf"; then
+      #sudo sed -i "/^\[Theme\]/a Current=$theme_name" "$sddm_conf" 2>&1 | tee -a "$LOG"
+      #echo "Appended Current=$theme_name under [Theme] in $sddm_conf" | tee -a "$LOG"
+    #else
+      #echo "Updated Current=$theme_name in $sddm_conf" | tee -a "$LOG"
+    #fi
+  #else
     # Append the [Theme] section at the end if it doesn't exist
-    echo -e "\n[Theme]\nCurrent=$theme_name" | sudo tee -a "$sddm_conf" > /dev/null
-    echo "Added [Theme] section with Current=$theme_name in $sddm_conf" | tee -a "$LOG"
-  fi
+    #echo -e "\n[Theme]\nCurrent=$theme_name" | sudo tee -a "$sddm_conf" > /dev/null
+    #echo "Added [Theme] section with Current=$theme_name in $sddm_conf" | tee -a "$LOG"
+  #fi
 
   # Add [General] section with InputMethod=qtvirtualkeyboard if it doesn't exist
   if ! grep -q '^\[General\]' "$sddm_conf"; then
@@ -101,10 +104,10 @@ if git clone --depth=1 "$source_theme" "$theme_name"; then
   fi
 
   # Replace current background from assets
-  sudo cp -r assets/sddm.png "/usr/share/sddm/themes/$theme_name/Backgrounds/default" 2>&1 | tee -a "$LOG"
-  sudo sed -i 's|^wallpaper=".*"|wallpaper="Backgrounds/default"|' "/usr/share/sddm/themes/$theme_name/theme.conf" 2>&1 | tee -a "$LOG"
+  #sudo cp -r assets/sddm.png "/usr/share/sddm/themes/$theme_name/Backgrounds/default" 2>&1 | tee -a "$LOG"
+  #sudo sed -i 's|^wallpaper=".*"|wallpaper="Backgrounds/default"|' "/usr/share/sddm/themes/$theme_name/theme.conf" 2>&1 | tee -a "$LOG"
 
-  echo "${OK} - ${MAGENTA}Additional ${YELLOW}$theme_name SDDM Theme${RESET} successfully installed." | tee -a "$LOG"
+  #echo "${OK} - ${MAGENTA}Additional ${YELLOW}$theme_name SDDM Theme${RESET} successfully installed." | tee -a "$LOG"
 
 else
 
