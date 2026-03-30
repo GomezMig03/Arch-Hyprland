@@ -57,7 +57,7 @@ These do **not** modify Hyprland config files directly, but they install scripts
 ## 🧪 Indirect Writers via Hyprland‑Dots
 ### 🧩 Hyprland dotfiles installation
 - `install-scripts/dotfiles-main.sh`
-  - **Clones/Pulls:** `https://github.com/LinuxBeginnings/Hyprland-Dots`
+  - **Clones/Pulls:** `https://github.com/GomezMig03/Hyprland-Dots`
   - **Runs:** `Hyprland-Dots/copy.sh`
   - **Impact:** `copy.sh` is where Hyprland configs (`~/.config/hypr/*.conf`) are actually written.
 

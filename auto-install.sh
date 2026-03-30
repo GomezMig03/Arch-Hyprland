@@ -1,11 +1,11 @@
 #!/bin/bash
 # ==================================================
 #  KoolDots (2026)
-#  Project URL: https://github.com/LinuxBeginnings
+#  Project URL: https://github.com/GomezMig03
 #  License: GNU GPLv3
 #  SPDX-License-Identifier: GPL-3.0-or-later
 # ==================================================
-# https://github.com/LinuxBeginnings
+# https://github.com/GomezMig03
 
 # Set some colors for output messages
 OK="$(tput setaf 2)[OK]$(tput sgr0)"
@@ -25,7 +25,7 @@ RESET="$(tput sgr0)"
 
 # Variables
 Distro="Arch-Hyprland"
-Github_URL="https://github.com/LinuxBeginnings/$Distro.git"
+Github_URL="https://github.com/GomezMig03/$Distro.git"
 Distro_DIR="$HOME/$Distro"
 
 printf "\n%.0s" {1..1}

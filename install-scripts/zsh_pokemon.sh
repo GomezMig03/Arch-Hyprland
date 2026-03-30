@@ -1,11 +1,11 @@
 #!/bin/bash
 # ==================================================
 #  KoolDots (2026)
-#  Project URL: https://github.com/LinuxBeginnings
+#  Project URL: https://github.com/GomezMig03
 #  License: GNU GPLv3
 #  SPDX-License-Identifier: GPL-3.0-or-later
 # ==================================================
-# 💫 https://github.com/LinuxBeginnings 💫 #
+# 💫 https://github.com/GomezMig03 💫 #
 # pokemon-color-scripts#
 
 ## WARNING: DO NOT EDIT BEYOND THIS LINE IF YOU DON'T KNOW WHAT YOU ARE DOING! ##

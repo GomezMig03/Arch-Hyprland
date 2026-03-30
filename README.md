@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 > [!IMPORTANT]
 > If you want to use nouveau driver, dont choose nvidia in the option. This is because the nvidia installer part, it will blacklist nouveau. Hyprland will still be installed but it will skip blacklisting nouveau.
 
-- After installation, check [`THIS`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki/Notes_to_remember#--for-nvidia-gpu-users)
+- After installation, check [`THIS`](https://github.com/GomezMig03/Hyprland-Dots/wiki/Notes_to_remember#--for-nvidia-gpu-users)
 
 ## ✨ Auto clone and install
 
@@ -134,15 +134,15 @@ source ~/.zshrc
 #### ✨ TO DO once installation done and dotfiles copied
 
 - SUPER H for HINT or click on the waybar HINT! Button
-- Head over to [KooL Hyprland WIKI](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki)
+- Head over to [KooL Hyprland WIKI](https://github.com/GomezMig03/Hyprland-Dots/wiki)
 
 #### 🙋 Got a questions regarding the Hyprland Dots or configurations? 🙋
 
-- Head over to wiki Link [`WIKI`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki)
+- Head over to wiki Link [`WIKI`](https://github.com/GomezMig03/Hyprland-Dots/wiki)
 
 #### ⌨ Keybinds
 
-- Keybinds [`CLICK`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki/Keybinds)
+- Keybinds [`CLICK`](https://github.com/GomezMig03/Hyprland-Dots/wiki/Keybinds)
 
 > [!TIP]
 > KooL Hyprland has a searchable keybind function via rofi. (SUPER SHIFT K) or right click the `HINTS` waybar button
@@ -229,7 +229,7 @@ env = WLR_RENDERER_ALLOW_SOFTWARE,1
 
 #### 🫥 Improving performance for Older Nvidia Cards using driver 470
 
-- [`SEE HERE`](https://github.com/LinuxBeginnings/Hyprland-Dots/discussions/123#discussion-6035205)
+- [`SEE HERE`](https://github.com/GomezMig03/Hyprland-Dots/discussions/123#discussion-6035205)
 
 #### 📒 Final Notes
 

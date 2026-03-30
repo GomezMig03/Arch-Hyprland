@@ -1,5 +1,5 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/LinuxBeginnings 💫 ---- */  #
+# /* ---- 💫 https://github.com/GomezMig03 💫 ---- */  #
 
 # uninstalling hyprland packages
 OK="$(tput setaf 2)[OK]$(tput sgr0)"
