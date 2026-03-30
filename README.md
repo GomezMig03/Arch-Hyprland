@@ -2,6 +2,7 @@
 
 # ✨ Hyprland Install Script ✨
 
+
 </div>
 
 <div align="center">
@@ -22,7 +23,6 @@
   <a href="https://github.com/JaKooLit/Hyprland-Dots/wiki/Keybinds"><kbd> <br> Keybinds <br> </kbd></a>&ensp;&ensp;
   <a href="https://github.com/JaKooLit/Hyprland-Dots/wiki/FAQ"><kbd> <br> FAQ <br> </kbd></a>&ensp;&ensp;
 </div><br>
-
 
 <div align="center">
 
@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/49bc12b2-abaf-45de-a21c-67aacd9bb872
 > [!IMPORTANT]
 > If you want to use nouveau driver, dont choose nvidia in the option. This is because the nvidia installer part, it will blacklist nouveau. Hyprland will still be installed but it will skip blacklisting nouveau.
 
-- After installation, check [`THIS`](https://github.com/JaKooLit/Hyprland-Dots/wiki/Notes_to_remember#--for-nvidia-gpu-users)
+- After installation, check [`THIS`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki/Notes_to_remember#--for-nvidia-gpu-users)
 
 ## ✨ Auto clone and install
 
@@ -134,15 +134,15 @@ source ~/.zshrc
 #### ✨ TO DO once installation done and dotfiles copied
 
 - SUPER H for HINT or click on the waybar HINT! Button
-- Head over to [KooL Hyprland WIKI](https://github.com/JaKooLit/Hyprland-Dots/wiki)
+- Head over to [KooL Hyprland WIKI](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki)
 
 #### 🙋 Got a questions regarding the Hyprland Dots or configurations? 🙋
 
-- Head over to wiki Link [`WIKI`](https://github.com/JaKooLit/Hyprland-Dots/wiki)
+- Head over to wiki Link [`WIKI`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki)
 
 #### ⌨ Keybinds
 
-- Keybinds [`CLICK`](https://github.com/JaKooLit/Hyprland-Dots/wiki/Keybinds)
+- Keybinds [`CLICK`](https://github.com/LinuxBeginnings/Hyprland-Dots/wiki/Keybinds)
 
 > [!TIP]
 > KooL Hyprland has a searchable keybind function via rofi. (SUPER SHIFT K) or right click the `HINTS` waybar button
@@ -155,7 +155,7 @@ source ~/.zshrc
 #### 🙋 👋 Having issues or questions?
 
 - for the install part, kindly open issue on this repo
-- for the Pre-configured Hyprland dots / configuration, submit issue [`here`](https://github.com/GomezMig03/Hyprland-Dots/issues)
+- for the Pre-configured Hyprland dots / configuration, submit issue [`here`](https://github.com/GomezMig03/dotfiles/issues)
 
 #### 🔧 Proper way to re-installing a particular script from install-scripts directory
 
@@ -165,7 +165,9 @@ source ~/.zshrc
 
 > [!IMPORTANT]
 > DO NOT cd into install-scripts directory as script will most likely to fail
+
 #### 🛠️ Optional system monitor scripts (cross-distro compatible)
+
 - These installer helpers will set up user-level services and install required packages automatically.
 - Works on Fedora, Arch, and other distributions using standard tools.
 - Re-run any time from the repo root (do not `cd` into `install-scripts`).
@@ -183,7 +185,7 @@ source ~/.zshrc
   - Detects sensors (runs `sudo sensors-detect --auto` once)
   - Creates: `~/.config/hypr/scripts/temp-monitor.sh` and user service `temp-monitor.service`
   - Manage: `systemctl --user status|start|stop temp-monitor`
-> Packages above are installed by the respective installer scripts; no manual action is required. If you prefer package pre-install via the main package list, ensure `acpi`, `lm_sensors`, and `libnotify` are present in your setup.
+    > Packages above are installed by the respective installer scripts; no manual action is required. If you prefer package pre-install via the main package list, ensure `acpi`, `lm_sensors`, and `libnotify` are present in your setup.
 
 #### 🛣️ Roadmap:
 
@@ -227,19 +229,9 @@ env = WLR_RENDERER_ALLOW_SOFTWARE,1
 
 #### 🫥 Improving performance for Older Nvidia Cards using driver 470
 
-- [`SEE HERE`](https://github.com/JaKooLit/Hyprland-Dots/discussions/123#discussion-6035205)
+- [`SEE HERE`](https://github.com/LinuxBeginnings/Hyprland-Dots/discussions/123#discussion-6035205)
 
 #### 📒 Final Notes
 
-- join my discord channel [`Discord`](https://discord.gg/RZJgC7KAKm)
+- join my discord channel [`Discord`](https://discord.com/invite/kool-tech-world)
 - Feel free to copy, re-distribute, and use this script however you want. Would appreciate if you give me some loves by crediting my work :)
-
-#### ✍️ Contributing
-
-- As stated above, these script does not contain actual config files. These are only the installer of packages
-- If you want to contribute and/or test the Hyprland-Dotfiles (development branch), [`Hyprland-Dots-Development`](https://github.com/JaKooLit/Hyprland-Dots/tree/development)
-- Want to contribute on This Installer? Click [`HERE`](https://github.com/GomezMig03/Arch-Hyprland/blob/main/CONTRIBUTING.md) for a guide how to contribute
-
-#### 👍👍👍 Thanks and Credits!
-
-- [`Hyprland`](https://hyprland.org/) Of course to Hyprland and @vaxerski for this awesome Dynamic Tiling Manager.

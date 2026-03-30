@@ -1,5 +1,11 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
+# 💫 https://github.com/LinuxBeginnings 💫 #
 # KooL Arch-Hyprland uninstall script #
 
 clear
@@ -94,6 +100,7 @@ packages=(
     "imagemagick" "Image manipulation tool" "off"
     "kitty" "kitty-terminal" "off"
     "kvantum" "QT apps theming" "off"
+    "qt-style-kvantum" "QT apps theming" "off"
     "mousepad" "simple text editor" "off"
     "mpv" "multi-media player" "off"
     "mpv-mpris" "mpv-plugin" "off"
@@ -109,6 +116,7 @@ packages=(
     "qalculate-gtk" "calculator - QT" "off"
     "qt5ct" "qt5ct" "off"
     "qt6ct" "qt6ct" "off"
+    "qt6-style-kvantum" "QT apps theming" "off"
     "quickshell" "quickshell" "off"
     "rofi-wayland" "rofi-wayland" "off"
     "slurp" "screenshot tool" "off"
@@ -130,6 +138,7 @@ packages=(
     "hypridle" "hyprland idling agent" "off"
     "hyprlock" "lockscreen" "off"
     "hyprpolkitagent" "hyprland polkit agent" "off"
+    "xfce-polkit" "polkit agent" "off"
     "hyprland" "hyprland main package" "off"
 )
 

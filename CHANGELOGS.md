@@ -1,5 +1,22 @@
 ## CHANGELOGS
 
+## Mar 2026
+
+- Fixed issue with policy kit not properly escalating access
+- Added check for `rofi` it was begin removed
+  - Script was trying to install `rofi-wayland`
+  - Package no longer exists
+  - Now checks for rofi installed and correct version
+- Added check for `paplay`
+  - Removes remove delay in playing notification sounds
+  - Also needed for `Toggle-Active-Window-Audio.sh`
+- Migrated Jakoolit references to LinuxBeginnings
+- Updated discord link
+- Added `uwsm` in case someone selects that by default
+  - Prevents black screen or exiting back to login manager
+- Added Spanish translations for CoC, Commit msg,and contributing docs
+- Added missing SDDM package for CachyOS distro
+
 ## Dec 2025
 
 Added:
@@ -161,7 +178,7 @@ Added:
 
 ## 08 Aug 2024
 
-- Increased to 1 sec delay for installing base-devel [commit](https://github.com/JaKooLit/Arch-Hyprland/commit/7ebfa06c3b186f9bec0bcf268fae401ba67dfc2a)
+- Increased to 1 sec delay for installing base-devel [commit](https://github.com/LinuxBeginnings/Arch-Hyprland/commit/7ebfa06c3b186f9bec0bcf268fae401ba67dfc2a)
 
 ## 07 Jul 2024
 

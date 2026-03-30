@@ -1,5 +1,11 @@
 #!/bin/bash
-# https://github.com/JaKooLit
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
+# https://github.com/LinuxBeginnings
 
 clear
 
@@ -356,6 +362,8 @@ sleep 1
 echo "${INFO} Installing ${SKY_BLUE}KooL Hyprland additional packages...${RESET}" | tee -a "$LOG"
 sleep 1
 execute_script "01-hypr-pkgs.sh"
+sleep 1
+execute_script "polkit-setup.sh"
 
 echo "${INFO} Installing ${SKY_BLUE}pipewire and pipewire-audio...${RESET}" | tee -a "$LOG"
 sleep 1

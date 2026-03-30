@@ -1,8 +1,14 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
+# 💫 https://github.com/LinuxBeginnings 💫 #
 # Hyprland Packages #
 
-# edit your packages desired here. 
+# edit your packages desired here.
 # WARNING! If you remove packages here, dotfiles may not work properly.
 # and also, ensure that packages are present in AUR and official Arch Repo
 
@@ -11,58 +17,63 @@ Extra=(
 
 )
 
-hypr_package=( 
+hypr_package=(
   #aylurs-gtk-shell
   bc
   cliphist
-  curl 
-  grim 
-  gvfs 
+  curl
+  grim
+  gvfs
   gvfs-mtp
   hyprpolkitagent
   imagemagick
-  inxi 
+  inxi
   jq
   kitty
   kvantum
   libspng
-  nano  
-  network-manager-applet 
-  pamixer 
+  nano
+  network-manager-applet
+  pamixer
   pavucontrol
+  libpulse
   playerctl
   python-requests
   python-pyquery
   qt5ct
+  qt-style-kvantum
   qt6ct
   qt6-svg
+  qt6-style-kvantum
   rofi
   slurp 
   swappy 
   swaync 
   awww
   unzip # needed later
-  wallust 
+  uwsm  # In case someone selects USWM login
+  wallust
   waybar
   wget
   wl-clipboard
   wlogout
+  xfce-polkit
   xdg-user-dirs
-  xdg-utils 
+  xdg-utils
   yad
 )
 
 # the following packages can be deleted. however, dotfiles may not work properly
 hypr_package_2=(
-  brightnessctl 
+  brightnessctl
   btop
   cava
   loupe
   fastfetch
   gnome-system-monitor
-  mousepad 
+  mousepad
   mpv
-  mpv-mpris 
+  mpv-mpris
   nvtop
   nwg-look
   nwg-displays
@@ -88,11 +99,14 @@ uninstall=(
 )
 
 ## WARNING: DO NOT EDIT BEYOND THIS LINE IF YOU DON'T KNOW WHAT YOU ARE DOING! ##
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Change the working directory to the parent directory of the script
 PARENT_DIR="$SCRIPT_DIR/.."
-cd "$PARENT_DIR" || { echo "${ERROR} Failed to change directory to $PARENT_DIR"; exit 1; }
+cd "$PARENT_DIR" || {
+  echo "${ERROR} Failed to change directory to $PARENT_DIR"
+  exit 1
+}
 
 # Source the global functions script
 if ! source "$(dirname "$(readlink -f "$0")")/Global_functions.sh"; then
@@ -100,15 +114,25 @@ if ! source "$(dirname "$(readlink -f "$0")")/Global_functions.sh"; then
   exit 1
 fi
 
-
-
 # Set the name of the log file to include the current date and time
 LOG="Install-Logs/install-$(date +%d-%H%M%S)_hypr-pkgs.log"
+# rofi v2.x presence check (do not remove if already on v2.x)
+skip_rofi_uninstall=false
+if pacman -Qi rofi &>/dev/null; then
+  rofi_version="$(pacman -Qi rofi | awk -F': ' '/Version/{print $2}' | cut -d- -f1)"
+  if [[ "${rofi_version%%.*}" == "2" ]]; then
+    skip_rofi_uninstall=true
+    echo -e "${INFO} rofi ${rofi_version} detected. Skipping uninstall of rofi."
+  fi
+fi
 
 # conflicting packages removal
 overall_failed=0
 printf "\n%s - ${SKY_BLUE}Removing some packages${RESET} as it conflicts with KooL's Hyprland Dots \n" "${NOTE}"
 for PKG in "${uninstall[@]}"; do
+  if [[ "$PKG" == "rofi" && "$skip_rofi_uninstall" == "true" ]]; then
+    continue
+  fi
   uninstall_package "$PKG" 2>&1 | tee -a "$LOG"
   if [ $? -ne 0 ]; then
     overall_failed=1
@@ -129,3 +153,13 @@ for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
 done
 
 printf "\n%.0s" {1..2}
+
+# Ensure hyprpolkitagent user service is enabled and running
+if systemctl --user list-unit-files 2>/dev/null | grep -q '^hyprpolkitagent\.service'; then
+  if ! systemctl --user is-enabled --quiet hyprpolkitagent 2>/dev/null; then
+    systemctl --user enable hyprpolkitagent 2>&1 | tee -a "$LOG" || true
+  fi
+  if ! systemctl --user is-active --quiet hyprpolkitagent 2>/dev/null; then
+    systemctl --user start hyprpolkitagent 2>&1 | tee -a "$LOG" || true
+  fi
+fi

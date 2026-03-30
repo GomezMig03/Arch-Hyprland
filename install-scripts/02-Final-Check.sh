@@ -1,5 +1,11 @@
 #!/bin/bash
-# 💫 https://github.com/JaKooLit 💫 #
+# ==================================================
+#  KoolDots (2026)
+#  Project URL: https://github.com/LinuxBeginnings
+#  License: GNU GPLv3
+#  SPDX-License-Identifier: GPL-3.0-or-later
+# ==================================================
+# 💫 https://github.com/LinuxBeginnings 💫 #
 # Final checking if packages are installed
 # NOTE: These package check are only the essentials
 
@@ -85,5 +91,14 @@ else
     fi
 
     echo "${NOTE} Missing packages logged at $(date)" >> "$LOG"
+fi
+
+# Check hyprpolkitagent user service status
+if systemctl --user list-unit-files 2>/dev/null | grep -q '^hyprpolkitagent\.service'; then
+    if systemctl --user is-active --quiet hyprpolkitagent 2>/dev/null; then
+        echo "${OK} hyprpolkitagent user service is running." | tee -a "$LOG"
+    else
+        echo "${WARN} hyprpolkitagent user service is not running." | tee -a "$LOG"
+    fi
 fi
 
