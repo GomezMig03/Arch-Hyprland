@@ -40,7 +40,7 @@ hypr_package=(
   slurp 
   swappy 
   swaync 
-  swww
+  awww
   unzip # needed later
   wallust 
   waybar
@@ -69,6 +69,10 @@ hypr_package_2=(
   pacman-contrib
   qalculate-gtk
   yt-dlp
+  hyprsunset
+  fcitx5
+  fcitx5-qt
+  overskride
 )
 
 # List of packages to uninstall as it conflicts some packages
